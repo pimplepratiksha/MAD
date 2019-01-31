@@ -1,1 +1,2 @@
-# MAD...(Modern Application Development)
+# MAD...
+Assignment 1
