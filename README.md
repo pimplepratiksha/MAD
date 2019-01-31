@@ -2,16 +2,20 @@
 Assignment 1
 
 Mongo Sample for Golang read/write
+
+
 Sample data source:
 
 https://github.com/ozlerhakan/mongodb-json-files/blob/master/datasets/restaurant.json
+
 Tasks:
 
-    Write a script - python/golang to import the documents separated by newline into a mongo collection named "restaurant"
+ Write a script - python/golang to import the documents separated by newline into a mongo collection named "restaurant"
 
-    Write an implementation of the given interface which reads/writes data & write a main file which demonstrates this.
+ Write an implementation of the given interface which reads/writes data & write a main file which demonstrates this.
 
-    Write a command line interface which accepts command line arguments into the terminal which retreives data in golang(extra credit).
+ Write a command line interface which accepts command line arguments into the terminal which retreives data in golang(extra credit).
+
 
 Following commands should work:
 
