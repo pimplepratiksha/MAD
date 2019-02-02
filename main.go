@@ -19,6 +19,8 @@ func main() {
 	fmt.Println(repoaccess)
 	
 	//repoaccess.Insert("newset.txt")
+	fname :=os.Args[1]
+	repoaccess.Insert(fname)
 	
 	var ip string
 	var final []*domain.Restaurant 
