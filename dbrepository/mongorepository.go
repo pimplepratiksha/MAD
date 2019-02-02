@@ -16,7 +16,7 @@ type MongoRepository struct {
 	db           string
 }
 
-var collectionName = "newrestaurant"
+var collectionName = "restaurant"
 
 //*****************************************************************************************************
 
