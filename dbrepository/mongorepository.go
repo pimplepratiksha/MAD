@@ -8,6 +8,7 @@ import (
 	"encoding/json"
 	"bufio"
 	"os"
+	"fmt"
 )
 
 //MongoRepository mongodb repo
@@ -35,13 +36,15 @@ func (r *MongoRepository) Insert(filename string) (int,error){
 	}
 	defer fname.Close()
 	fp:=bufio.NewScanner(fname)
-	var final=&domain.Restaurant{}
+	var final= domain.Restaurant{}
 	rcnt:=0
 	for fp.Scan(){
 			rcnt+=1
-		json.Unmarshal([]byte(fp.Text()),final)
+		line:=fp.Text()
+		fmt.Println(line)
+		json.Unmarshal([]byte(line),&final)
 		final.DBID=domain.NewID()
-		_,err:=r.Store(final)
+		_,err:=r.Store(&final)
 		if	err!=nil{
 			return rcnt,err
 		}
